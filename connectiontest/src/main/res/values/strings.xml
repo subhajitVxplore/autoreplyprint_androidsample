@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ConnectionTest</string>
+    <string name="bt2">BT2.0</string>
+    <string name="bt4">BT4.0</string>
+    <string name="net">NET</string>
+    <string name="usb">USB</string>
+    <string name="com">COM</string>
+    <string name="p2p">P2P</string>
+    <string name="enumport">Enum Port</string>
+    <string name="testcount">TestCount</string>
+    <string name="testinterval">TestInterval(ms)</string>
+    <string name="starttest">StartTest</string>
+    <string name="stoptest">StopTest</string>
+    <string name="printtext">PrintText</string>
+    <string name="printqrcode">PrintQRCode</string>
+    <string name="printimage">PrintImage</string>
+    <string name="connection_failed_to_enable_bluetooth_adapter">Failed to enable bluetooth adapter</string>
+    <string name="connection_enable_gps_hint">Please enable gps else will not search bluetooth printer</string>
+</resources>

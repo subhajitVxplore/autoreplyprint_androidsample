@@ -1,0 +1,35 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.0'
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+//国内用android studio的时候,在gradle这步一定会卡住,所以需要以下步骤自己去下载gradle
+//1.在gradle-wrapper.properties中查看gradle下载地址和版本
+//2.去查看所有分发的gradle版本地址:https://services.gradle.org/distributions/
+//3.下载完成后放到什么地方?
+//  1.windows在 C:\Users\yourname\.gradle\wrapper\dists\gradle-版本\随机字符串\
+//  2.mac在 /Users/用户名/.gradle/wrapper/dists/gradle-版本/随机字符串/
+//4.将gradle-版本.zip.part移除，把自己下载的gradle-gradle-版本.zip复制到这个目录。然后再次启动Andriod Studio，会自动读取gradle并解压

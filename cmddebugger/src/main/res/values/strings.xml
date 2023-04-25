@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CmdDebugger</string>
+    <string name="bt2">BT2.0</string>
+    <string name="bt4">BT4.0</string>
+    <string name="net">NET</string>
+    <string name="usb">USB</string>
+    <string name="com">COM</string>
+    <string name="p2p">P2P</string>
+    <string name="listen">Listen</string>
+    <string name="enumport">Enum Port</string>
+    <string name="openport">Open Port</string>
+    <string name="closeport">Close Port</string>
+    <string name="recv">Recv</string>
+    <string name="send">Send</string>
+    <string name="copy">Copy</string>
+    <string name="clear">Clear</string>
+    <string name="selectfile">Select File</string>
+    <string name="sendfile">Send File</string>
+</resources>

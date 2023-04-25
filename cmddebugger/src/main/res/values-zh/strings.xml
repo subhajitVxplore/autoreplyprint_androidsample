@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">调试助手</string>
+    <string name="bt2">BT2.0</string>
+    <string name="bt4">BT4.0</string>
+    <string name="net">NET</string>
+    <string name="usb">USB</string>
+    <string name="com">COM</string>
+    <string name="p2p">P2P</string>
+    <string name="listen">Listen</string>
+    <string name="enumport">搜索端口</string>
+    <string name="openport">打开端口</string>
+    <string name="closeport">关闭端口</string>
+    <string name="recv">接收</string>
+    <string name="send">发送</string>
+    <string name="copy">复制</string>
+    <string name="clear">清空</string>
+    <string name="selectfile">选择文件</string>
+    <string name="sendfile">发送文件</string>
+</resources>

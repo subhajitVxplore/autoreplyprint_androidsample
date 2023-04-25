@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        applicationId "com.caysn.autoreplyprint.cmddebugger"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    signingConfigs {
+        release {
+            keyAlias 'key0'
+            storeFile file('../keystore/keystore.jks')
+            keyPassword '123456'
+            storePassword '123456'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            if (variant.buildType.name == "release") {
+                variant.getPackageApplicationProvider().get().outputDirectory = new File(project.rootDir.absolutePath + "/release")
+                variant.getPackageApplicationProvider().get().outputScope.apkDatas.forEach { apkData ->
+                    apkData.outputFileName = ((project.name != "app") ? project.name : rootProject.name) + ".apk"
+                }
+            }
+        }
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs '../aar'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api(name:'autoreplyprint', ext:'aar')
+    implementation 'com.android.support:support-v4:28.0.0'
+}
